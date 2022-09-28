@@ -94,14 +94,14 @@
             line-height: 1.5 
         }
         i{
-            font-size: 10px;
+            font-size: 8px;
         }
-        #seetag{
+        #line+p+p+p{
             font-size: 14px;
             font-weight: 700;
             color: white;
         }
-        #seetag:hover{
+        #line+p+p+p:hover{
             cursor: pointer;
             text-decoration: underline;
         }
@@ -142,7 +142,8 @@
             
             <div id="line"></div>
             <p>Shopping in the U.S.?</p>
-            <p>International customers can shop on www.bestbuy.com and have orders shipped to any U.S. address or U.S. store. <a id="seetag" href="">See More Details <i class="fa-solid fa-greater-than"></i></a></p>
+            <p>International customers can shop on www.bestbuy.com and have orders shipped to any U.S. address or U.S. store.
+            <p>See More Detais <i class="fa-solid fa-greater-than"></i></p>
         </div>
     </div>
 </body>
@@ -151,6 +152,8 @@
 <script>
       document.querySelector("#Francis").addEventListener("click",chanageF);
       function chanageF(){
+
+        document.querySelector("#line+p+p+p").remove();
         document.querySelector("#parent>img+h1").innerText = "Bonjour!"
         document.querySelector("#h1tag2").innerText = "Choisir un pays :"
         document.querySelector("#line+p").innerText = "Vous magasinez aux É.-U.?"
@@ -161,10 +164,16 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
       }
 
       document.querySelector("#Espanol").addEventListener("click",chanageL);
       function chanageL(){
+
+        document.querySelector("#line+p+p+p").remove();
         document.querySelector("#parent>img+h1").innerText = "¡Hola!"
         document.querySelector("#h1tag2").innerText = "Seleciona un país."
         document.querySelector("#line+p").innerText = "¿COMPRANDO EN EE. UU.?"
@@ -175,10 +184,16 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
       }
 
       document.querySelector("#English").addEventListener("click",chanageE);
       function chanageE(){
+
+        document.querySelector("#line+p+p+p").remove();
         document.querySelector("#parent>img+h1").innerText = "Hello!"
         document.querySelector("#h1tag2").innerText = "Choose a country."
         document.querySelector("#line+p").innerText = "Shopping in the U.S.?"
@@ -189,6 +204,16 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
+      }
+
+      document.querySelector("#line+p+p+p").addEventListener("click",goSignup);
+
+      function goSignup(){
+        window.location.href= "signup.html";
       }
 
 
