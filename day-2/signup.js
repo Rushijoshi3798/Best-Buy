@@ -2,8 +2,6 @@ let info = JSON.parse(localStorage.getItem("info"));
 
 document.querySelector("form").addEventListener("submit",formFun);
 
-let dataArr2 = []
-
 function formFun(event){
     event.preventDefault();
 
@@ -16,9 +14,11 @@ function formFun(event){
 
     if (email === info.email && password === info.password || mbl === info.mbl && password === info.password){
         alert("Hurry! Login SuccessFul")
+        window.location.href="navbar.html"
     } else {
-        alert ("Incorrect Credetials")
+        alert ("Incorrect Credetials");
     }
+    
 
     
 }
