@@ -1,12 +1,24 @@
-document.querySelector("#navbar>img").addEventListener("click",imgFun);
+let info = JSON.parse(localStorage.getItem("info"));
 
-function imgFun(){
-    // console.log("hello")
-}
+document.querySelector("form").addEventListener("submit",formFun);
 
-document.querySelector("form").addEventListener("submit",function(event){
+let dataArr2 = []
+
+function formFun(event){
     event.preventDefault();
-    // console.log("hey")
 
     
-})
+        let email= document.querySelector("#email").value;
+        let password= document.querySelector("#password").value;
+        let mbl = document.querySelector("#mbl").value ;
+        
+        let info = JSON.parse(localStorage.getItem("info"));
+
+    if (email === info.email && password === info.password || mbl === info.mbl && password === info.password){
+        alert("Hurry! Login SuccessFul")
+    } else {
+        alert ("Incorrect Credetials")
+    }
+
+    
+}
