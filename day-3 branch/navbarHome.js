@@ -6,3 +6,4 @@ function Myfun(){
     console.log("Hello")
 }
 "hello"
+"hello"
