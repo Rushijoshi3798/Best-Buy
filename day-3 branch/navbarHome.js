@@ -1,10 +1,9 @@
+// let AddCart = document.querySelector(".AddCart");
 
-let AddCart = document.querySelector(".AddCart");
+// AddCart.addEventListener("click",Myfun);
 
-AddCart.addEventListener("click",Myfun);
-
-function Myfun(){
-    console.log("Hello")
-}
-"hello"
+// function Myfun(){
+//     // console.log("Hello")
+// } //
+//  
 
