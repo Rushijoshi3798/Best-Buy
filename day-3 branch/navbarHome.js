@@ -1,9 +1,10 @@
-// let AddCart = document.querySelector(".AddCart");
 
-// AddCart.addEventListener("click",Myfun);
+let AddCart = document.querySelector(".AddCart");
 
-// function Myfun(){
-//     // console.log("Hello")
-// } //
-//  
+AddCart.addEventListener("click",Myfun);
+
+function Myfun(){
+    console.log("Hello")
+}
+"hello"
 

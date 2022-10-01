@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Best buy International</title>
+    <style>
+        body{
+            background-color: black;
+           
+        }
+        body>div{
+            border: 1px solid black;
+            width: 100%;
+            
+        }
+        #language{
+            height: 20px;
+            display: flex;
+            background-color: black;
+        }
+        #language>div{
+            width: 200px;
+            display: flex;
+            margin-left: 60%;
+            justify-content: space-around;
+            background-color: black;
+            color: white;
+        }
+        .EFE:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #language+div{
+            height: 700px;
+            background-color: #2a4bb3;
+        }
+        #language+div>div{
+            width: 40%;
+            height: auto;
+            margin: auto;
+            margin-top: 50px;
+            color: white;
+            font: sans-serif;
+        }
+        #language+div>div>img{
+            width: 15%;
+
+        }
+        #flag{
+
+            display: flex;
+            width: 100%;
+            padding-right: -100px;
+
+        }
+        #flag>div{
+            width: 30%;
+        }
+        .flagimg{
+            width: 90%;
+            border: 5px solid #2a4bb3;
+        }
+        #flag>div>p{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+        h1{
+           font-family: sans-serif;
+           font-size: 50px;
+           font-weight: 800;
+        }
+        #h1tag2{
+            margin-top: -40px;
+        }
+        .flagimg:hover{
+            cursor: pointer;
+            border: 5px solid yellow;
+        }
+        #line{
+            background-color: #3d65d3;
+            width: 100%;
+            height: 1px;
+        }
+        #line~p{
+            font-family: sans-serif; 
+            line-height: 1.5  
+        }
+        #line+p{
+            font-weight: 600;
+            line-height: 1.5 
+        }
+        i{
+            font-size: 8px;
+        }
+        #line+p+p+p{
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+        #line+p+p+p:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #line+p+p+p:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="language">
+        <div>
+            <div class="EFE" id="English">English</div>
+            <div class="EFE" id="Francis">Francis</div>
+            <div class="EFE" id="Espanol">Espanol</div>
+        </div>
+    </div>
+
+    <div>
+        <div id="parent">
+            <img src="https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png" alt="logo">
+            <h1>Hello!</h1>
+            <h1 id="h1tag2">Choose a country.</h1>
+            <div id="flag">
+                <div>
+                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/canada.svg" alt="Canada">
+                    <p>Canada</p>
+                </div>
+                <div>
+                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/usa.svg" alt="United States">
+                    <p>United States</p>
+                </div>
+                <div>
+                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/mexico.svg" alt="Mexico">
+                    <p>Mexico</p>
+                </div>
+            </div>
+            
+            <div id="line"></div>
+            <p>Shopping in the U.S.?</p>
+            <p>International customers can shop on www.bestbuy.com and have orders shipped to any U.S. address or U.S. store.
+            <p>See More Detais <i class="fa-solid fa-greater-than"></i></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+      document.querySelector("#Francis").addEventListener("click",chanageF);
+      function chanageF(){
+
+        document.querySelector("#line+p+p+p").remove();
+        document.querySelector("#parent>img+h1").innerText = "Bonjour!"
+        document.querySelector("#h1tag2").innerText = "Choisir un pays :"
+        document.querySelector("#line+p").innerText = "Vous magasinez aux É.-U.?"
+        document.querySelector("#line+p+p").innerText = "Les clients internationaux peuvent magasiner au www.bestbuy.com et faire livrer leurs commandes quel magasin aux États-Unis."
+        
+       let x = document.createElement("p");
+       x.innerText= "Voir les détails";
+       document.querySelector("#line+p+p").append(x);
+       x.style.cursor="pointer";
+       x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
+      }
+
+      document.querySelector("#Espanol").addEventListener("click",chanageL);
+      function chanageL(){
+
+        document.querySelector("#line+p+p+p").remove();
+        document.querySelector("#parent>img+h1").innerText = "¡Hola!"
+        document.querySelector("#h1tag2").innerText = "Seleciona un país."
+        document.querySelector("#line+p").innerText = "¿COMPRANDO EN EE. UU.?"
+        document.querySelector("#line+p+p").innerText = "Clientes internacionales pueden comparer en www.bestbuy.com y enviar sus pedidos a cualquier domicilio o tienda en EE. UU. "
+        
+       let x = document.createElement("p");
+       x.innerText= "Ver más detalles ";
+       document.querySelector("#line+p+p").append(x);
+       x.style.cursor="pointer";
+       x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
+      }
+
+      document.querySelector("#English").addEventListener("click",chanageE);
+      function chanageE(){
+
+        document.querySelector("#line+p+p+p").remove();
+        document.querySelector("#parent>img+h1").innerText = "Hello!"
+        document.querySelector("#h1tag2").innerText = "Choose a country."
+        document.querySelector("#line+p").innerText = "Shopping in the U.S.?"
+        document.querySelector("#line+p+p").innerText = "International customers can shop on www.bestbuy.com and have orders shipped to any U.S. address or U.S. store. "
+        
+       let x = document.createElement("p");
+       x.innerText= "See More Details ";
+       document.querySelector("#line+p+p").append(x);
+       x.style.cursor="pointer";
+       x.style.textDecoration="underline";
+       x.addEventListener("click",goSignup);
+       function goSignup(){
+        window.location.href="signup.html";
+       }
+      }
+
+      document.querySelector("#line+p+p+p").addEventListener("click",goSignup);
+
+      function goSignup(){
+        window.location.href= "signup.html";
+      }
+
+
+</script>
