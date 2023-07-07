@@ -1,5 +1,4 @@
-# Welcome to ebuzz
-
+# Welcome to Best Buy
 <h3>Best Buy is a consumer electronics retailer with operations in the U.S., Mexico, and Canada. The company sells a wide variety of items, including mobile phones, digital cameras, video games, and other Electronic Items. An Individual project built in only 5 Days.
 </h3>
 
