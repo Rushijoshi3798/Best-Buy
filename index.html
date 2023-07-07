@@ -47,7 +47,9 @@
         }
         #language+div>div>img{
             width: 15%;
-
+        }
+        #language+div>div>img:hover{
+            cursor: pointer;
         }
         #flag{
 
@@ -122,20 +124,20 @@
 
     <div>
         <div id="parent">
-            <img src="https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png" alt="logo">
+            <img id="logo_image" src="https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png" alt="logo">
             <h1>Hello!</h1>
             <h1 id="h1tag2">Choose a country.</h1>
             <div id="flag">
-                <div>
-                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/canada.svg" alt="Canada">
+                <div class="flag_Img_Div">
+                    <a href="./createAccount.html"><img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/canada.svg" alt="Canada"></a>
                     <p>Canada</p>
                 </div>
-                <div>
-                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/usa.svg" alt="United States">
+                <div class="flag_Img_Div">
+                    <a href="./createAccount.html"><img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/usa.svg" alt="United States"></a>
                     <p>United States</p>
                 </div>
-                <div>
-                    <img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/mexico.svg" alt="Mexico">
+                <div class="flag_Img_Div">
+                    <a href="./createAccount.html"><img class="flagimg" src="https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/mexico.svg" alt="Mexico"></a>
                     <p>Mexico</p>
                 </div>
             </div>
@@ -151,8 +153,17 @@
 
 <script>
 
-   
 
+// logo onclick
+document.querySelector("#logo_image").addEventListener("click", () => {
+    let LoggedInOrNot = localStorage.getItem("info");
+    if(LoggedInOrNot){
+        window.location.href="./navbarHome.html"
+    }else {
+        window.location.href='./signup.html';
+        alert("kindly Login First...!")
+    }
+})
 
       document.querySelector("#Francis").addEventListener("click",chanageF);
       function chanageF(){
@@ -168,11 +179,6 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
-       x.addEventListener("click",goSignup);
-       function goSignup(){
-        window.location.href="createAccount.html";
-
-       }
        }
 
       document.querySelector("#Espanol").addEventListener("click",chanageL);
@@ -189,10 +195,6 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
-       x.addEventListener("click",goSignup);
-       function goSignup(){
-        window.location.href="createAccount.html";
-       }
       }
 
       document.querySelector("#English").addEventListener("click",chanageE);
@@ -209,21 +211,19 @@
        document.querySelector("#line+p+p").append(x);
        x.style.cursor="pointer";
        x.style.textDecoration="underline";
-       x.addEventListener("click",goSignup);
-       function goSignup(){
-        window.location.href="createAccount.html";
-       }
       }
 
       document.querySelector("#line+p+p+p").addEventListener("click",goSignup);
 
       function goSignup(){
+        console.log("main");
         window.location.href= "createAccount.html";
       }
-let loginflag = document.querySelector(".flagimg");
+let loginflag = document.querySelectorAll(".flag_Img_Div");
 loginflag.addEventListener("click",myfunction)
 
 function myfunction(){
+    console.log("main2");
     window.location.href="createAccount.html";
 }
 
