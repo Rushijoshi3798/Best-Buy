@@ -30,27 +30,27 @@
 
 ## Landing Page :
 
-![LandingPage](./Best-Buy/images/landing_page.png)
+![LandingPage](./images/landing_page.png)
 
 ## Signup Page :
 
-![SignupPage](./Best-Buy/images/signup_page.png)
+![SignupPage](./images/signup_page.png)
 
 ## Login Page :
 
-![LoginPage](./Best-Buy/images/Login_page.png)
+![LoginPage](./images/Login_page.png)
 
 ## Home Page :
 
-![HomePage](./Best-Buy/images/Home%20Page.png)
+![HomePage](./images/Home%20Page.png)
 
 ## Cart Page :
 
-![cartPage](./Best-Buy/images/Cart%20Page.png)
+![cartPage](./images/Cart%20Page.png)
 
 ## Checkout Page :
 
-![CheckoutPage](./Best-Buy/images/Checkout%20Page.png)
+![CheckoutPage](./images/Checkout%20Page.png)
 
 
 Source Code(GitHub link):- https://github.com/Rushijoshi3798/Best-Buy
